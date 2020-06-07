@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Article One",
+        "category": "example1"
+    },
+    {
+        "title": "Article Two",
+        "category": "Example2"
+    },
+    {
+        "title": "Article Three",
+        "category": "Example3"
+    }
+]
