@@ -20,8 +20,12 @@
 
 // document.querySelector('#similarArticles').innerHTML = output;
 
+var i;
 fetch('json/articles.json')
     .then(data => data.json())
     .then(data => {
         console.log(data);
+        for (i = 0; i < data.length; i++){
+            console.log(data[i].title)
+        }
     });
