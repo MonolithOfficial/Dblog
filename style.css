@@ -108,11 +108,17 @@ body{
     .navLogo{
         visibility: hidden;
     }
+    #navbar {
+        border: hidden;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 @media (max-width: 768px){
     #wrapper{
         border: hidden;
         width: 100%;
+        margin: 0;
         margin-top: 0;
         border-radius: 0;
     }
