@@ -75,7 +75,7 @@ body{
 }
 .desc {
     width: 60vw;
-    text-align: center;
+    text-align: start;
     color: black;
     margin: auto;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -90,7 +90,7 @@ body{
     transition: 0.5s;
 }
 #wrapper img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #similarArticles {
@@ -104,8 +104,9 @@ body{
     height: 10vw;
 }
 
-@media (max-width: 768px){
-    desc {
-        text-align: start;
+@media (max-width: 1360px){
+    .navLogo{
+        visibility: hidden;
     }
 }
+
