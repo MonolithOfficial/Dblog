@@ -29,7 +29,7 @@ fetch('json/top_ten_dm_90s.json')
         for (k = 0; k < data.length; k++){
             // console.log(data[i].title);
             dm_output += `
-            <div class "wrapper">
+            <div id="wrapper">
                 <h3 class="mainSubTitle">${data[k].place}. ${data[k].name}</h3>
                 <p class="desc">${data[k].description}</p>
                 <img src="${data[k].photo}" alt="${data[k].name}">
