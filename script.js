@@ -19,10 +19,15 @@
 // }
 
 // document.querySelector('#similarArticles').innerHTML = output;
+var fileName = location.href.split("/").slice(-1); 
+if (fileName[0] == "index.html"){
+    console.log(fileName[0]);
+}
+var jsonToFetch = "top_ten_dm_90s.json";
 
 var k;
 var dm_output = '';
-fetch('json/top_ten_dm_90s.json')
+fetch('json/'+jsonToFetch)
     .then(data => data.json())
     .then(data => {
         console.log(data);
@@ -37,6 +42,7 @@ fetch('json/top_ten_dm_90s.json')
             `
         }
         document.querySelector('#wrapperHolder').innerHTML = dm_output;
+        document.querySelector('#mainTitleHolder').innerHTML = `<h2 class="mainTitle">${data[0].title}</h2>`;
     });
 
 
