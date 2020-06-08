@@ -126,8 +126,11 @@ body{
         margin-top: 0;
         border-radius: 0;
     }
+    .desc {
+        width: 98vw;
+    }
     #wrapper img {
-        width: 70vw;
+        width: 95vw;
     }
     #wrapper img:hover {
         transform: none;
