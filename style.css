@@ -108,13 +108,17 @@ body{
     .navLogo{
         visibility: hidden;
     }
+}
+@media (max-width: 768px){
+    .mainSubTitle {
+        margin-top: 0;
+    }
     #navbar {
+        width: 100vw;
         border: hidden;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
     }
-}
-@media (max-width: 768px){
     #wrapper{
         border: hidden;
         width: 100%;
@@ -128,5 +132,6 @@ body{
     #wrapper img:hover {
         transform: none;
     }
+
 }
 
