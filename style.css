@@ -74,11 +74,10 @@ body{
     text-align: center;
 }
 .desc {
-    width: 55vw;
+    width: 60vw;
     text-align: center;
     color: black;
     margin: auto;
-    transition: 0.3s;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #wrapper img {
@@ -93,11 +92,6 @@ body{
 #wrapper img:hover {
     transform: scale(1.1);
 }
-.desc:hover {
-    text-shadow:
-    0 -1px 0 grey,
-    0 2px 0 grey;
-}
 
 #similarArticles {
     width: 80%;
@@ -108,4 +102,10 @@ body{
     border-radius: 20px;
     width: 10vw;
     height: 10vw;
+}
+
+@media (max-width: 768px){
+    desc {
+        text-align: start;
+    }
 }
