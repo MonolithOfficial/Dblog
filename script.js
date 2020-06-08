@@ -20,15 +20,35 @@
 
 // document.querySelector('#similarArticles').innerHTML = output;
 
+var k;
+var dm_output = '';
+fetch('json/top_ten_dm_90s.json')
+    .then(data => data.json())
+    .then(data => {
+        console.log(data);
+        for (k = 0; k < data.length; k++){
+            // console.log(data[i].title);
+            dm_output += `
+            <div class "wrapper">
+                <h3 class="mainSubTitle">${data[k].place}. ${data[k].name}</h3>
+                <p class="desc">${data[k].description}</p>
+                <img src="${data[k].photo}" alt="${data[k].name}">
+            </div>
+            `
+        }
+        document.querySelector('#wrapperHolder').innerHTML = dm_output;
+    });
+
+
 var i;
-var output = '';
+var sm_art_output = '';
 fetch('json/articles.json')
     .then(data => data.json())
     .then(data => {
         console.log(data);
         for (i = 0; i < data.length; i++){
             console.log(data[i].title);
-            output += `
+            sm_art_output += `
             <div class article number ${data[i].number}>
                 <img src="img/monolith.jpg" alt="article${data[i].number}" title="article${data[i].number}">
                 <p style="color: white">${data[i].title}</p>
@@ -36,5 +56,5 @@ fetch('json/articles.json')
             </div>
             `
         }
-        document.querySelector('#similarArticles').innerHTML = output;
+        document.querySelector('#similarArticles').innerHTML = sm_art_output;
     });
