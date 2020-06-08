@@ -21,11 +21,20 @@
 // document.querySelector('#similarArticles').innerHTML = output;
 
 var i;
+var output = '';
 fetch('json/articles.json')
     .then(data => data.json())
     .then(data => {
         console.log(data);
         for (i = 0; i < data.length; i++){
-            console.log(data[i].title)
+            console.log(data[i].title);
+            output += `
+            <div class article number ${data[i].number}>
+                <img src="img/monolith.jpg" alt="article${jsonData[i].number}" title="article${jsonData[i].number}">
+                <p style="color: white">${data[i].title}</p>
+                <p style="color: white">${data[i].category}</p>
+            </div>
+            `
         }
+        document.querySelector('#similarArticles').innerHTML = output;
     });
