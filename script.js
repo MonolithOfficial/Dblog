@@ -30,7 +30,7 @@ fetch('json/articles.json')
             console.log(data[i].title);
             output += `
             <div class article number ${data[i].number}>
-                <img src="img/monolith.jpg" alt="article${jsonData[i].number}" title="article${jsonData[i].number}">
+                <img src="img/monolith.jpg" alt="article${data[i].number}" title="article${data[i].number}">
                 <p style="color: white">${data[i].title}</p>
                 <p style="color: white">${data[i].category}</p>
             </div>
