@@ -110,6 +110,9 @@ body{
     }
 }
 @media (max-width: 768px){
+    body {
+        background-color: white;
+    }
     .mainSubTitle {
         margin-top: 0;
     }
